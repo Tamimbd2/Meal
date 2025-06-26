@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Home Management System</h1>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="controls">
+                <div class="card">
+                    <h2>Add New Expense</h2>
+                    <form id="expense-form">
+                        <div class="form-group">
+                            <label for="date">Date:</label>
+                            <input type="date" id="date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="market">Market Cost:</label>
+                            <input type="number" id="market" placeholder="e.g., 1530" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="border">Number of Borders:</label>
+                            <input type="number" id="border" placeholder="e.g., 3" required>
+                        </div>
+                         <div class="form-group">
+                            <label for="payer">Paid By:</label>
+                            <select id="payer">
+                                <option value="TAMIM">Tamim</option>
+                                <option value="AL-AMIN">Al-Amin</option>
+                                <option value="NUR">Nur</option>
+                                <option value="MB">MB</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="note">Note:</label>
+                            <input type="text" id="note" placeholder="e.g., Gas Cylinder">
+                        </div>
+                        <button type="submit">Add Expense</button>
+                    </form>
+                </div>
+
+                <div class="card">
+                    <h2>Account Management</h2>
+                    <div id="account-balances">
+                        </div>
+                    <form id="account-form">
+                         <div class="form-group">
+                            <label for="account-name">Select Account:</label>
+                            <select id="account-name">
+                                <option value="TAMIM">Tamim</option>
+                                <option value="AL-AMIN">Al-Amin</option>
+                                <option value="NUR">Nur</option>
+                                <option value="MB">MB</option>
+                            </select>
+                        </div>
+                         <div class="form-group">
+                            <label for="amount">Amount:</label>
+                            <input type="number" id="amount" placeholder="e.g., 1000" required>
+                        </div>
+                        <div class="account-buttons">
+                            <button type="button" id="add-money">Add Money</button>
+                            <button type="button" id="withdraw-money">Withdraw</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="data-table">
+                <h2>Expense History</h2>
+                 <button id="clear-data">Clear All Data</button>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Market</th>
+                            <th>Border</th>
+                            <th>Per Meal</th>
+                            <th>Tamim</th>
+                            <th>Al-Amin</th>
+                            <th>Nur</th>
+                            <th>MB</th>
+                            <th>Note</th>
+                        </tr>
+                    </thead>
+                    <tbody id="expense-table-body">
+                        </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
